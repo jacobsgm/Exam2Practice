@@ -40,7 +40,7 @@ def main():
     ####################################################################
 
     run_test_init()
-#     run_test_append_string()
+    run_test_append_string()
 #     run_test_double()
 #     run_test_shrink()
 #     run_test_double_then_shrink()
@@ -163,6 +163,19 @@ class Box(object):
         #       Read_this_ONLY_when_asked_Part_2.txt
         #    and continue working on the problem.
         # --------------------------------------------------------------
+
+        space = self.volume - len(self.contents)
+        number_of_characters_to_append = min(space,
+                                             len(additional_contents))
+        stuff_to_add = ''
+        for k in range(number_of_characters_to_append):
+            stuff_to_add = stuff_to_add + additional_contents[k]
+        self.contents = self.contents + stuff_to_add
+        stuff_to_return = ''
+        for k in range(number_of_characters_to_append,
+                       len(additional_contents)):
+            stuff_to_return = stuff_to_return + additional_contents[k]
+        return stuff_to_return
 
     def double(self):
         """
