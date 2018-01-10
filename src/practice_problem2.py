@@ -57,7 +57,7 @@ def run_test_practice_problem2a():
     print('Testing the   practice_problem2a   function:')
     print('--------------------------------------------------')
 
-    expected
+
 
 def practice_problem2a(sequence, delta):
     """
