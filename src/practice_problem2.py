@@ -212,7 +212,7 @@ def practice_problem2b(sequence):
       :type sequence [str]
     """
     ####################################################################
-    # TODO: 4. Implement and test this function.
+    # DONE: 4. Implement and test this function.
     #     The testing code is already written for you (above).
     ####################################################################
     # DIFFICULTY AND TIME RATINGS (see top of this file for explanation)
@@ -222,7 +222,10 @@ def practice_problem2b(sequence):
 
     new_seq = ''
     for k in range(len(sequence)):
-        new_seq = new_seq + sequence[k]
+        for h in range(len(sequence[k])):
+            letter_to_add = sequence[k][0]
+        new_seq = new_seq + letter_to_add
+    return new_seq
 
 # ----------------------------------------------------------------------
 # Calls  main  to start the ball rolling.
