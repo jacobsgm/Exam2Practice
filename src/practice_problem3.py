@@ -371,6 +371,12 @@ def practice_problem3c(sequence):
     #    TIME ESTIMATE:   8 minutes.
     ####################################################################
 
+    new_list = []
+    for k in range(len(sequence)):
+        if (sequence[k] == 0):
+            new_list += [k]
+    return new_list
+
 
 def run_test_practice_problem3d():
     """ Tests the    practice_problem3d    function. """
