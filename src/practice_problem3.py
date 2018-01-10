@@ -2,8 +2,8 @@
 PRACTICE Test 2, practice_problem 3.
 
 Authors: David Mutchler, Dave Fisher, Valerie Galluzzi, Amanda Stouder,
-         their colleagues and PUT_YOUR_NAME_HERE.
-"""  # TODO: 1. PUT YOUR NAME IN THE ABOVE LINE.
+         their colleagues and Garrett Jacobs.
+"""  # DONE: 1. PUT YOUR NAME IN THE ABOVE LINE.
 
 ########################################################################
 # Students:
@@ -64,7 +64,7 @@ def is_prime(n):
     return True
     # ------------------------------------------------------------------
     # Students:
-    #   Do NOT touch the above  is_prime  function - it has no TODO.
+    #   Do NOT touch the above  is_prime  function - it has no TO DO.
     #   Do NOT copy code from this function.
     #
     # Instead, ** CALL ** this function as needed in the problems below.
@@ -156,7 +156,7 @@ def practice_problem3a(circles):
       :type sequence: [rg.Circle]
     """
     ####################################################################
-    # TODO: 2. Implement and test this function.
+    # DONE: 2. Implement and test this function.
     #     The testing code is already written for you (above).
     ####################################################################
     # DIFFICULTY AND TIME RATINGS (see top of this file for explanation)
@@ -164,6 +164,11 @@ def practice_problem3a(circles):
     #    TIME ESTIMATE:   10 minutes.
     ####################################################################
 
+    value = 1
+    for k in range(len(circles)):
+        x_value = circles[k].center.x
+        value = value * x_value
+    return value
 
 def run_test_practice_problem3b():
     """ Tests the    practice_problem3b    function. """
@@ -279,6 +284,11 @@ def practice_problem3b(sequence):
     #    TIME ESTIMATE:   8 minutes.
     ####################################################################
 
+    for k in range (len(sequence)-1,0,-1):
+        if (sequence[len(sequence)-1] == sequence[k]):
+            return True
+        else:
+            return False
 
 def run_test_practice_problem3c():
     """ Tests the    practice_problem3c    function. """
