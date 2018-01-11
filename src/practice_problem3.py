@@ -451,7 +451,7 @@ def practice_problem3d(sequence):
       :type: sequence: list    or tuple or string
     """
     ####################################################################
-    # TODO: 5. Implement and test this function.
+    # DONE: 5. Implement and test this function.
     #     The testing code is already written for you (above).
     ####################################################################
     # DIFFICULTY AND TIME RATINGS (see top of this file for explanation)
@@ -459,23 +459,29 @@ def practice_problem3d(sequence):
     #    TIME ESTIMATE:   8 minutes for each part of this problem.
     ####################################################################
 
+    for k in range(len(sequence)):
+        if (sequence[k]==0):
+            return k
+    return -1
 
     ####################################################################
-    # TODO: 6. Just ABOVE this TODO, you should have implemented
+    # DONE: 6. Just ABOVE this TO DO, you should have implemented
     #     a solution for the   practice_problem3d   function.
     #     Here, put ANOTHER solution, as follows:
     #
-    #       -- Your FIRST solution (ABOVE this TODO)
+    #       -- Your FIRST solution (ABOVE this TO DO)
     #            should be a solution that IGNORES
     #              practice_problem3c (the previous problem).
     #
-    #       -- Your SECOND solution (BELOW this TODO)
+    #       -- Your SECOND solution (BELOW this TO DO)
     #            should be a solution that USES (calls)
     #              practice_problem3c.
     #
     #          This solution should *** HAVE NO LOOP (no FOR). ***
     ####################################################################
 
+    x = practice_problem3c(sequence)
+    return (x[0])
 
 def run_test_practice_problem3e():
     """ Tests the    practice_problem3e    function. """
@@ -537,13 +543,20 @@ def practice_problem3e(sequence):
       :type sequence: list(float)    or tuple(float)
     """
     # ------------------------------------------------------------------
-    # TODO: 7. Implement and test this function.
+    # DONE: 7. Implement and test this function.
     #     The testing code is already written for you (above).
     ####################################################################
     # DIFFICULTY AND TIME RATINGS (see top of this file for explanation)
     #    DIFFICULTY:      5
     #    TIME ESTIMATE:   8 minutes.
     ####################################################################
+
+    total = 0
+    for k in range(len(sequence)):
+        if (k % 2 == 0):
+            total += (sequence[k])
+    return total
+
 
 
 # ----------------------------------------------------------------------
